@@ -86,7 +86,13 @@ Padding createTextFormField(ValueSetter<String> onChangedName) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: Constants.horizontalPadding, vertical: Constants.verticalPadding),
     child: TextFormField(
+      maxLength: Constants.maxLessonNameLength,
       onChanged: onChangedName,
+      validator: (name) {
+        if (name == null || name.trim().length < Constants.minLessonNameLength) {
+          return Constants.nameErrorMessage;
+        }
+      },
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Constants.borderRadius),

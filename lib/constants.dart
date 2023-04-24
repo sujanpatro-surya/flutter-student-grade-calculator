@@ -13,6 +13,9 @@ class Constants {
   static const String singularLesson = 'Lesson';
   static const String pluralLesson = 'Lessons';
   static const String gradeType = 'GPA';
+  static const String gradeSubtitle = 'Grade Value: ';
+  static const String creditSubtitle = 'Credits: ';
+  static const String nameErrorMessage = 'Enter a valid Lesson Name';
 
   static const int defaultGrade = 10;
   static const int defaultCredit = 1;
@@ -22,6 +25,9 @@ class Constants {
   static const double verticalPadding = 5;
   static const double iconSize = 50;
   static const double fieldOpacity = 0.5;
+  static const int maxCredits = 5;
+  static const int minLessonNameLength = 2;
+  static const int maxLessonNameLength = 30;
 
   static const Color transparent = Colors.transparent;
   static const MaterialColor primary = Colors.deepPurple;

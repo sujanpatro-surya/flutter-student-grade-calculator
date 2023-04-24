@@ -8,27 +8,25 @@ class ShowAverage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            numberOfLessons > 0 ?
-              '$numberOfLessons ${
-                numberOfLessons > 1 ?
-                  Constants.pluralLesson :
-                  Constants.singularLesson
-              }' :
-            Constants.noLessonMessage,
-            style: Constants.lessonStyle,
-          ),
-          Text(
-            average >= 0 ? average.toStringAsFixed(1) : '0.00',
-            style: Constants.averageStyle),
-          Text(Constants.gradeType, style: Constants.lessonStyle)
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          numberOfLessons > 0 ?
+            '$numberOfLessons ${
+              numberOfLessons > 1 ?
+                Constants.pluralLesson :
+                Constants.singularLesson
+            }' :
+          Constants.noLessonMessage,
+          style: Constants.lessonStyle,
+        ),
+        Text(
+          average >= 0 ? average.toStringAsFixed(1) : '0.0',
+          style: Constants.averageStyle),
+        Text(Constants.gradeType, style: Constants.lessonStyle)
+      ],
     );
   }
 }

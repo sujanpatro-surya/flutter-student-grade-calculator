@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grade_calculator/constants.dart';
 
 import '../../modal/lesson.dart';
 
@@ -19,7 +20,7 @@ class Grades{
   }
 
   static List<int> _allCredits() {
-    return List.generate(5, (index) => index + 1);
+    return List.generate(Constants.maxCredits, (index) => index + 1);
   }
 
   static List<DropdownMenuItem<int>> letterGradeItems() {

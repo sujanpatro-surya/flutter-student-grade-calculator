@@ -17,7 +17,7 @@ class LessonList extends StatelessWidget {
         return Dismissible(
           key: UniqueKey(),
           direction: DismissDirection.horizontal,
-          onDismissed: (_){
+          onDismissed: (_) {
             onDismiss(index);
           },
           child: Padding(
@@ -27,8 +27,9 @@ class LessonList extends StatelessWidget {
                 title:Text(allLessons[index].name),
                 leading: CircleAvatar(
                   backgroundColor: Constants.primary,
-                  child: Text(Grades.getAverage().toStringAsFixed(2))),
-                subtitle: Text('Grade Value: ${allLessons[index].grade}, Credit Value: ${allLessons[index].credit}')
+                  child: Text(allLessons[index].grade.toString())
+                ),
+                subtitle: Text('${Constants.gradeSubtitle} ${allLessons[index].grade}, ${Constants.creditSubtitle} ${allLessons[index].credit}')
               )
             ),
           ),
